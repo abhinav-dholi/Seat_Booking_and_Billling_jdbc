@@ -1,0 +1,51 @@
+
+create database restaurantbilling12a;
+use restaurantbilling12a;
+
+
+
+create table categories
+(
+CategoryID varchar(50)primary key,
+Name varchar(50)
+);
+insert into Categories values(1,'Starters');
+insert into Categories values(2,'Main Course');
+insert into Categories values(3,'Dessert');
+insert into Categories values(4,'Beverages');
+
+
+
+create table Items(ItemNo int(5) primary key,Name varchar(50) not null,
+Category varchar(50),Price decimal(7,2) not null);
+
+
+create table Bill
+(Billid int(3) primary key auto_increment,
+billno int(3) not null
+,name varchar(50) not null,
+DateofBill date,
+item varchar(50),
+qty int(3),
+rate decimal(7,2) not null,
+amount decimal(7,2) not null);
+
+create table SeatBooking
+(bookingid int(3) primary key auto_increment,
+CustomerName varchar(30),
+seatid varchar(3), 
+dateofbooking date,
+bookingdate date,
+NoOfPeople int(3)
+);
+
+
+
+
+
+
+
+
+
+
+
